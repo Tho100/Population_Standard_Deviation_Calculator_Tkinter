@@ -1,1 +1,1 @@
-![Population_tkinter](https://user-images.githubusercontent.com/64541739/155321908-c3811f93-9509-432f-b80a-658a6b581138.png)
+![sample_population](https://user-images.githubusercontent.com/64541739/156109274-4fca4541-445f-44e6-a6fb-c2ad5d4b2b46.png)
