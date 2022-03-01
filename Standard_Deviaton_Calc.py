@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import pandas as pd 
 
 window = Tk()
-window.geometry('300x250')
+window.geometry('330x250')
 window.title('Standard Deviation Calculator')
 
 insert_n = tk.Entry(window)
