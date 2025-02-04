@@ -13,23 +13,23 @@ insert_n.pack()
 
 def population_deviation():
     try:
+        
         numbers = [int(x.strip()) for x in insert_n.get().strip().split(',')]
 
-        mu = sum(numbers)/len(numbers)
-        mean_label = tk.Label(window, text='Mean: ' + str(mu))
+        mean = np.sum(numbers)/len(numbers)
+        
+        mean_label = tk.Label(window, text='Mean: ' + str(mean))
         mean_label.pack()   
-        sum1 = 0
-        for j in range(len(numbers)):
-            # Population
-            variance = (numbers[j]-mu)**2
-            sum1 = sum1 + variance
-        population = (cmath.sqrt(sum1/len(numbers)))
-        result = tk.Label(window,text='Population: ' + str(population))
+
+        variance = np.sum((numbers - mean) ** 2)
+        std_deviation = np.sqrt(variance / len(numbers))
+
+        result = tk.Label(window,text='Standard Deviation: ' + str(std_deviation))
         result.pack()
-        # Sample
-        len_nums = len(numbers)-1
-        find_sample = (cmath.sqrt(sum1/len_nums))
-        sample_label = tk.Label(window,text='Sample: ' + str(find_sample))
+
+        sample_variance = variance / len(numbers) - 1
+
+        sample_label = tk.Label(window,text='Sample: ' + str(sample_variance))
         sample_label.pack()
 
     except ValueError as e:
